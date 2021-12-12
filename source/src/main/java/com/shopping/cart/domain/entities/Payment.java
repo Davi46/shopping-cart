@@ -1,9 +1,12 @@
 package com.shopping.cart.domain.entities;
 
 import com.shopping.cart.domain.entities.enums.FormPayment;
-
+import lombok.Getter;
+import lombok.Setter;
 import java.util.UUID;
 
+@Getter
+@Setter
 public class Payment {
     private UUID identifier;
     private FormPayment formPayment;
@@ -15,30 +18,6 @@ public class Payment {
     public Payment(UUID identifier, FormPayment formPayment, Card card) {
         this.identifier = identifier;
         this.formPayment = formPayment;
-        this.card = card;
-    }
-
-    public UUID getIdentifier() {
-        return identifier;
-    }
-
-    public void setIdentifier(UUID identifier) {
-        this.identifier = identifier;
-    }
-
-    public FormPayment getFormPayment() {
-        return formPayment;
-    }
-
-    public void setFormPayment(FormPayment formPayment) {
-        this.formPayment = formPayment;
-    }
-
-    public Card getCard() {
-        return card;
-    }
-
-    public void setCard(Card card) {
         this.card = card;
     }
 }

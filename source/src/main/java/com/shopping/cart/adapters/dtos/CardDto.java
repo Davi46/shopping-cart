@@ -1,12 +1,13 @@
-package com.shopping.cart.domain.entities;
+package com.shopping.cart.adapters.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.UUID;
+
 @Getter
 @Setter
-public class Card {
+public class CardDto {
     private UUID identifier;
     private String firstName;
     private String lastName;
@@ -15,10 +16,10 @@ public class Card {
     private String dueDate;
     private int codeSecurity;
 
-    public Card() {
+    public CardDto() {
     }
 
-    public Card(String firstName, String lastName, String socialSecurityNumber, String number, String dueDate, int codeSecurity) {
+    public CardDto(String firstName, String lastName, String socialSecurityNumber, String number, String dueDate, int codeSecurity) {
         this.identifier = UUID.randomUUID();
         this.firstName = firstName;
         this.lastName = lastName;

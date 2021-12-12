@@ -1,20 +1,21 @@
-package com.shopping.cart.domain.entities;
+package com.shopping.cart.adapters.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.UUID;
+
 @Getter
 @Setter
-public class Product {
+public class ProductDto {
     private UUID identifier;
     private String name;
     private double price;
 
-    public Product() {
+    public ProductDto() {
     }
 
-    public Product(String name, double price) {
+    public ProductDto(String name, double price) {
         this.identifier = UUID.randomUUID();
         this.name = name;
         this.price = price;

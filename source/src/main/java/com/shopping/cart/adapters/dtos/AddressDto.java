@@ -1,4 +1,4 @@
-package com.shopping.cart.domain.entities;
+package com.shopping.cart.adapters.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Getter
 @Setter
-public class Address {
+public class AddressDto {
     private UUID identifier;
     private String street;
     private String district;
@@ -15,10 +15,10 @@ public class Address {
     private String state;
     private String country;
 
-    public Address() {
+    public AddressDto() {
     }
 
-    public Address(String street, String district, int zipCode, String state, String country) {
+    public AddressDto(String street, String district, int zipCode, String state, String country) {
         this.identifier = UUID.randomUUID();
         this.street = street;
         this.district = district;

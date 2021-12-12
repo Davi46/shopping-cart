@@ -1,4 +1,4 @@
-package com.shopping.cart.adapters.inbound.webapi.dtos.enums;
+package com.shopping.cart.adapters.dtos.enums;
 
 public enum FormPaymentDto {
     DEBITCARD,

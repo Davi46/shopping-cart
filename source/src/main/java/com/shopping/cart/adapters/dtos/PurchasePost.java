@@ -1,4 +1,4 @@
-package com.shopping.cart.domain.entities;
+package com.shopping.cart.adapters.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,14 +8,14 @@ import java.util.UUID;
 
 @Getter
 @Setter
-public class Purchase {
+public class PurchasePost {
     private UUID identifier;
-    private Client client;
+    private ClientDto client;
     private double  discount;
-    private List<ChosenProduct> chosenProducts;
-    private Payment payment;
+    private List<ChosenProductDto> chosenProducts;
+    private PaymentDto payment;
 
-    public Purchase(Client client, double discount, List<ChosenProduct> chosenProducts, Payment payment) {
+    public PurchasePost(ClientDto client, double discount, List<ChosenProductDto> chosenProducts, PaymentDto payment) {
         this.identifier = UUID.randomUUID();
         this.client = client;
         this.discount = discount;
@@ -23,6 +23,6 @@ public class Purchase {
         this.payment = payment;
     }
 
-    public Purchase() {
+    public PurchasePost() {
     }
 }
